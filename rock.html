@@ -1,0 +1,50 @@
+<html>
+<a href="main.html">BACK TO HOME PAGE</a>
+<body>
+	<br />
+	<script type="text/javascript">
+var ifu= prompt("Enter your name"+ "");
+document.write("Hello"+ ifu);
+if (time < 10) {
+     greeting = "Good morning";
+ } else if (time < 20) {
+     greeting = "Good day";
+ } else {
+     greeting = "Good evening";
+ } 
+
+
+</script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+ function initialize() {
+   var mapProp = {
+     center:new google.maps.LatLng(51.508742,-0.120850),
+     zoom:5,
+     mapTypeId:google.maps.MapTypeId.HYBRID
+   };
+   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+ }
+ google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="googleMap" style="width:500px;height:380px;"></div>
+
+<div id="outer">
+<div id="form">
+	<form id="f1"  onsubmit="return submitDisplay();" method="post" >
+    <p> Current location: <input type="text" name="text1" required autofocus /> </p>
+    <p> Destination: <input type="text" name="text2" required /> </p>
+    <p> <input type="submit" name="submit1" value="Enter" onclick="return submitDisplay()" /> </p>
+</form>
+</div> 
+<div id="results">
+    
+</div> 
+</div> 
+
+
+</body>
+</html>
